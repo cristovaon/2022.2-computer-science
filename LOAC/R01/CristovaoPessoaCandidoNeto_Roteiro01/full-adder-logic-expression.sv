@@ -1,5 +1,8 @@
-// Cristovão Pessoa Cândido Neto - 121110199
-// Fazendo pela expressao logica do carry-out e sum bit a bit
+/*
+Problema 02 - Full Adder
+Cristovão Pessoa Cândido Neto - 121110199
+Fazendo pela expressao logica do carry-out e sum bit a bit
+*/
 parameter NUM_OF_BITS=8;
 module bits_adder(
   input signed [NUM_OF_BITS-1:0] num1, num2,
