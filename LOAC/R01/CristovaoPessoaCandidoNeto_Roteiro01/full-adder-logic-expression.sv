@@ -35,7 +35,3 @@ module full_adder (
   end
   
 endmodule
-
-
-// nesse caso é mais fácil fazer usando a descrição comportamental
-// vamos simplesmente fazer A+B
