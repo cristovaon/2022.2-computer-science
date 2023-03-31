@@ -13,8 +13,12 @@ module full_adder(
   always_comb begin
     sum <= num1 + num2;
     is_negative <= sum < 0;
+    // ou
+    // is_negative <= S[N_BITS-1] == 1;
     is_zero <= sum == 0;
     is_even <= sum % 2 == 0;
+    // usando bitwise
+    // is_even <= !(sum & 1);
   end
   
 
