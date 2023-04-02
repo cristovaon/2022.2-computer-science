@@ -6,19 +6,19 @@ Fazendo usando a descrição comportamental
 
 parameter N_BITS=8;
 module full_adder(
-  input logic signed [N_BITS-1:0] num1, input signed [N_BITS-1:0] num2,
-  output logic signed [N_BITS-1:0] sum,
-  output logic is_negative, is_zero, is_even
+  input logic signed [N_BITS-1:0] A, input signed [N_BITS-1:0] B,
+  output logic signed [N_BITS-1:0] S,
+  output logic N, Z, P
 );
   always_comb begin
-    sum <= num1 + num2;
-    is_negative <= sum < 0;
+    S <= A + B;
+    N <= S < 0;
     // ou
-    // is_negative <= S[N_BITS-1] == 1;
-    is_zero <= sum == 0;
-    is_even <= sum % 2 == 0;
+    // N <= S[N_BITS-1] == 1;
+    Z <= S == 0;
+    P <= S % 2 == 0;
     // usando bitwise
-    // is_even <= !(sum & 1);
+    // P <= !(S & 1);
   end
   
 
