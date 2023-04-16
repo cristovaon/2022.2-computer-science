@@ -38,3 +38,26 @@ getRoots a b c
   | delta == 0 = [-b/2*a]
   | otherwise = [(-b + sqrt delta )/2*a, (-b - sqrt delta)/2*a]
   where delta = b*b - 4*a*c
+
+-- Map
+times4:: Int -> Int
+times4 x = x*4
+
+listTimes4 = map times4 [1,2,3,4,5]
+
+-- Implementing the map
+-- Remember this syntax: primeNumbers2 = 3 : 5 : 7 : 11 :[]
+multBy4:: [Int] -> [Int]
+multBy4 [] = []
+multBy4 (x:xs) = times4 x : multBy4 xs
+
+stringEquals:: [Char] -> [Char] -> Bool
+stringEquals [] [] = True
+stringEquals _ _ = False
+stringEquals (x:xs) (y:ys) = x == y && stringEquals xs ys
+
+
+-- Passing a function to a function (functions are first-class values)
+mult3By4:: (Int -> Int) -> Int
+mult3By4 callback = callback 3
+result = mult3By4 times4
