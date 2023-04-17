@@ -1,3 +1,5 @@
+import Helpers
+
 -- type declaration of the function
 -- since haskell has type inference, it's not required to create the type declaration, but it's a good practice.
 add:: Int -> Int -> Int
@@ -61,3 +63,4 @@ stringEquals (x:xs) (y:ys) = x == y && stringEquals xs ys
 mult3By4:: (Int -> Int) -> Int
 mult3By4 callback = callback 3
 result = mult3By4 times4
+
