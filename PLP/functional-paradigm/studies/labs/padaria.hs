@@ -3,7 +3,7 @@ main = do
   {-
     In a do block, you can parse the inpure type to a pure type using
     <- syntax. In this example the line read is IO Int and then it is
-    stored as an Int in itemsList.
+    stored as an Int in numberOfItems.
 
     Also, in a do block, 
     to store a standard pure returned value from a function or an attribution,
